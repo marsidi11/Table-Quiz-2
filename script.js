@@ -96,10 +96,6 @@ var ques_num = [1,2,3,4,5,6,7,8,9,10,11];
 shuffle(ques_num);
 
 
-/*function check_for_right_answer() {
-	
-}*/
-
 function change_question() {
 
 	var question = document.getElementById("question");
@@ -111,7 +107,6 @@ function change_question() {
 	var image = document.getElementById("image");
 	image.src = "img/ques" + img_num + ".jpg";
 	++n;
-
 
 	document.getElementById("question-counter").innerHTML = "Question: " + ++num;
 
@@ -127,309 +122,135 @@ function change_question() {
 
 }
 
-function check1() {
-	for (var i = 1; i <= 11; i++) {
-		if ((window["ques" + i]) === ques1) {
-			if (document.getElementById("button1").textContent == q1a1) {
-				document.getElementById("button1").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques2) {
-			if (document.getElementById("button1").textContent == q2a1) {
-				document.getElementById("button1").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button3").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques3) {
-			if (document.getElementById("button1").textContent == q3a1) {
-				document.getElementById("button1").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques4) {
-			if (document.getElementById("button1").textContent == q4a1) {
-				document.getElementById("button1").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button3").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques5) {
-			if (document.getElementById("button1").textContent == q5a1) {
-				document.getElementById("button1").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques6) {
-			if (document.getElementById("button1").textContent == q6a1) {
-				document.getElementById("button1").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques7) {
-			if (document.getElementById("button1").textContent == q7a1) {
-				document.getElementById("button1").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button3").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques8) {
-			if (document.getElementById("button1").textContent == q8a1) {
-				document.getElementById("button1").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button3").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques9) {
-			if (document.getElementById("button1").textContent == q9a1) {
-				document.getElementById("button1").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques10) {
-			if (document.getElementById("button1").textContent == q10a1) {
-				document.getElementById("button1").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques11) {
-			if (document.getElementById("button1").textContent == q11a1) {
-				document.getElementById("button1").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button3").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		}
+function qq1() {
+	if (document.getElementById("question").textContent == ques1) {
+		document.getElementById("button1").style.background = "#FF3A3A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#6EFF4A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
 	}
+}
+function qq2() {
+	if (document.getElementById("question").textContent == ques2) {
+		document.getElementById("button1").style.background = "#6EFF4A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#FF3A3A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq3() {
+	if (document.getElementById("question").textContent == ques3) {
+		document.getElementById("button1").style.background = "#FF3A3A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#6EFF4A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq4() {
+	if (document.getElementById("question").textContent == ques4) {
+		document.getElementById("button1").style.background = "#6EFF4A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#FF3A3A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq5() {
+	if (document.getElementById("question").textContent == ques5) {
+		document.getElementById("button1").style.background = "#FF3A3A";
+		document.getElementById("button2").style.background = "#6EFF4A";
+		document.getElementById("button3").style.background = "#FF3A3A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq6() {
+	if (document.getElementById("question").textContent == ques6) {
+		document.getElementById("button1").style.background = "#FF3A3A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#6EFF4A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq7() {
+	if (document.getElementById("question").textContent == ques7) {
+		document.getElementById("button1").style.background = "#6EFF4A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#FF3A3A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq8() {
+	if (document.getElementById("question").textContent == ques8) {
+		document.getElementById("button1").style.background = "#6EFF4A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#FF3A3A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq9() {
+	if (document.getElementById("question").textContent == ques9) {
+		document.getElementById("button1").style.background = "#FF3A3A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#6EFF4A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq10() {
+	if (document.getElementById("question").textContent == ques10) {
+		document.getElementById("button1").style.background = "#FF3A3A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#FF3A3A";
+		document.getElementById("button4").style.background = "#6EFF4A";
+		setTimeout(change_question, 1300);
+	}
+}
+function qq11() {
+	if (document.getElementById("question").textContent == ques11) {
+		document.getElementById("button1").style.background = "#6EFF4A";
+		document.getElementById("button2").style.background = "#FF3A3A";
+		document.getElementById("button3").style.background = "#FF3A3A";
+		document.getElementById("button4").style.background = "#FF3A3A";
+		setTimeout(change_question, 1300);
+	}
+}
+function check1() {
+	qq1(); qq2(); qq3(); qq4(); qq5(); qq6(); qq7(); qq8(); qq9(); qq10(); qq11();
 }
 
 function check2() {
-	for (var i = 1; i <= 11; i++) {
-		if (document.getElementById("question").textContent == "Are you ready to start?") {
-			if (document.getElementById("button2").textContent == "Yes") {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button2").style.background = "#6EFF4A";
-				document.getElementById("button3").style.background = "#6EFF4A";
-				document.getElementById("button1").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				setTimeout(change_question, 1000);
-				break;
-			} 	
-		} else if ((window["ques" + i]) === ques1) {
-			if (document.getElementById("button2").textContent == q1a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			} 
-		} else if ((window["ques" + i]) === ques2) {
-			if (document.getElementById("button2").textContent == q2a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques3) {
-			if (document.getElementById("button2").textContent == q3a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques4) {
-			if (document.getElementById("button2").textContent == q4a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques5) {
-			if (document.getElementById("button2").textContent == q5a2) {
-				document.getElementById("button2").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button1").style.background = "#FF3A3A";
-				document.getElementById("button3").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques6) {
-			if (document.getElementById("button2").textContent == q6a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques7) {
-			if (document.getElementById("button2").textContent == q7a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques8) {
-			if (document.getElementById("button2").textContent == q8a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques9) {
-			if (document.getElementById("button2").textContent == q9a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques10) {
-			if (document.getElementById("button2").textContent == q10a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques11) {
-			if (document.getElementById("button2").textContent == q11a2) {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				break;
-			}
-		} 
+	if (document.getElementById("question").textContent == "Are you ready to start?") {
+		if (document.getElementById("button2").textContent == "Yes") {
+			document.getElementById("button1").style.background = "#FF3A3A";
+			document.getElementById("button2").style.background = "#6EFF4A";
+			document.getElementById("button3").style.background = "#6EFF4A";
+			document.getElementById("button4").style.background = "#FF3A3A";
+			setTimeout(change_question, 1300);
+		}
 	}
+	qq1(); qq2(); qq3(); qq4(); qq5(); qq6(); qq7(); qq8(); qq9(); qq10(); qq11();
 }
 
 function check3() {
-	for (var i = 1; i <= 11; i++) {
-		if (document.getElementById("question").textContent == "Are you ready to start?") {
-			if (document.getElementById("button2").textContent == "Yes") {
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button2").style.background = "#6EFF4A";
-				document.getElementById("button3").style.background = "#6EFF4A";
-				document.getElementById("button1").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				setTimeout(change_question, 1000);
-				break;
-			} 	
-		} else if ((window["ques" + i]) === ques1) {
-			if (document.getElementById("button3").textContent == q1a3) {
-				document.getElementById("button3").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button1").style.background = "#FF3A3A";
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			} 
-		} else if ((window["ques" + i]) === ques2) {
-			if (document.getElementById("button3").textContent == q2a3) {
-				document.getElementById("button3").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques3) {
-			if (document.getElementById("button3").textContent == q3a3) {
-				document.getElementById("button3").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button1").style.background = "#FF3A3A";
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques4) {
-			if (document.getElementById("button3").textContent == q4a3) {
-				document.getElementById("button3").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques5) {
-			if (document.getElementById("button3").textContent == q5a3) {
-				document.getElementById("button3").style.background = "#6EFF4A";
-			}
-		} else if ((window["ques" + i]) === ques6) {
-			if (document.getElementById("button3").textContent == q6a3) {
-				document.getElementById("button3").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button1").style.background = "#FF3A3A";
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques7) {
-			if (document.getElementById("button3").textContent == q7a3) {
-				document.getElementById("button3").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques8) {
-			if (document.getElementById("button3").textContent == q8a3) {
-				document.getElementById("button3").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques9) {
-			if (document.getElementById("button3").textContent == q9a3) {
-				document.getElementById("button3").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button1").style.background = "#FF3A3A";
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques10) {
-			if (document.getElementById("button3").textContent == q10a3) {
-				document.getElementById("button3").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques11) {
-			if (document.getElementById("button3").textContent == q11a3) {
-				document.getElementById("button3").style.background = "#FF3A3A";
-				break;
-			}
-		} 
+	if (document.getElementById("question").textContent == "Are you ready to start?") {
+		if (document.getElementById("button2").textContent == "Yes") {
+			document.getElementById("button1").style.background = "#FF3A3A";
+			document.getElementById("button2").style.background = "#6EFF4A";
+			document.getElementById("button3").style.background = "#6EFF4A";
+			document.getElementById("button4").style.background = "#FF3A3A";
+			setTimeout(change_question, 1300);
+		}
 	}
+	qq1(); qq2(); qq3(); qq4(); qq5(); qq6(); qq7(); qq8(); qq9(); qq10(); qq11();
 }
 
 function check4() {
-	for (var i = 1; i <= 11; i++) {
-		if ((window["ques" + i]) === ques1) {
-			if (document.getElementById("button4").textContent == q1a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			} 
-		} else if ((window["ques" + i]) === ques2) {
-			if (document.getElementById("button4").textContent == q2a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques3) {
-			if (document.getElementById("button4").textContent == q3a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques4) {
-			if (document.getElementById("button4").textContent == q4a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques5) {
-			if (document.getElementById("button4").textContent == q5a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques6) {
-			if (document.getElementById("button4").textContent == q6a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques7) {
-			if (document.getElementById("button4").textContent == q7a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques8) {
-			if (document.getElementById("button4").textContent == q8a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques9) {
-			if (document.getElementById("button4").textContent == q9a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques10) {
-			if (document.getElementById("button4").textContent == q10a4) {
-				document.getElementById("button4").style.background = "#6EFF4A";
-				setTimeout(change_question, 1000);
-				document.getElementById("button1").style.background = "#FF3A3A";
-				document.getElementById("button2").style.background = "#FF3A3A";
-				document.getElementById("button3").style.background = "#FF3A3A";
-				break;
-			}
-		} else if ((window["ques" + i]) === ques11) {
-			if (document.getElementById("button4").textContent == q11a4) {
-				document.getElementById("button4").style.background = "#FF3A3A";
-				break;
-			}
-		} 
-	}
+	qq1(); qq2(); qq3(); qq4(); qq5(); qq6(); qq7(); qq8(); qq9(); qq10(); qq11();
 }
