@@ -1,7 +1,7 @@
 /*							
 * Poject Titile: Table Quiz 2	
 * Start Date: 27.05.2019 19:10   
-* By: Marsid Zyberi			 								   	
+* Author: Marsid Zyberi			 								   	
 */
 
 // ques1 => Question 1
@@ -12,6 +12,7 @@
 
 var num = 1;
 var n = 0;
+var score = 0;
 // Questions
 
 var ques1 = "Where was the Great Pyramid of Giza built?",
@@ -92,9 +93,12 @@ function shuffle(arr) {
 var question_list = [ques1, ques2, ques3, ques4, ques5, ques6, ques7, ques8, ques9, ques10, ques11];
 
 var ques_num = [1,2,3,4,5,6,7,8,9,10,11];
-
 shuffle(ques_num);
 
+var answ = [1,2,3,4];
+shuffle(answ);
+
+// Change question and image
 
 function change_question() {
 
@@ -102,38 +106,62 @@ function change_question() {
 	question.innerHTML = question_list[ques_num[n] - 1];
 
 	img_num = ques_num[n];	
-	console.log(img_num);
+	console.log("Question Number: " + img_num);
 
 	var image = document.getElementById("image");
 	image.src = "img/ques" + img_num + ".jpg";
 	++n;
 
-	document.getElementById("question-counter").innerHTML = "Question: " + ++num;
+	let counter = document.getElementById("question-counter");
+	counter.innerHTML = "Question: " + num++ + " [11]";
 
-	document.getElementById("button1").style.background = "white";
-	document.getElementById("button2").style.background = "white";
-	document.getElementById("button3").style.background = "white";
-	document.getElementById("button4").style.background = "white";
+	let b1 = document.getElementById("button1");
+	let b2 = document.getElementById("button2");
+	let b3 = document.getElementById("button3");
+	let b4 = document.getElementById("button4");
 
-	document.getElementById("button1").innerHTML = window["q" + img_num + "a1"];
-	document.getElementById("button2").innerHTML = window["q" + img_num + "a2"];
-	document.getElementById("button3").innerHTML = window["q" + img_num + "a3"];
-	document.getElementById("button4").innerHTML = window["q" + img_num + "a4"];
+	if (num > 12) {
+		counter.innerHTML = " 👇 Result 👇 "
+		image.style.display = "none";	
+		question.style.display = "none";
+		b1.innerHTML = "Total Questions:"
+		b2.innerHTML = "11";
+		b3.innerHTML = "Correct Answers:";
+		b4.innerHTML = score;
 
+		b1.style.background = "white";
+		b2.style.background = "white";
+		b3.style.background = "white";
+		b4.style.background = "white";
+
+	} else {
+		b1.style.background = "white";
+		b2.style.background = "white";
+		b3.style.background = "white";
+		b4.style.background = "white";
+
+		b1.innerHTML = window["q" + img_num + "a1"];
+		b2.innerHTML = window["q" + img_num + "a2"];
+		b3.innerHTML = window["q" + img_num + "a3"];
+		b4.innerHTML = window["q" + img_num + "a4"];
+	}
 }
+
+// Questions Color Changer
 
 function qq1() {
 	if (document.getElementById("question").textContent == ques1) {
-		document.getElementById("button1").style.background = "#FF3A3A";
-		document.getElementById("button2").style.background = "#FF3A3A";
-		document.getElementById("button3").style.background = "#6EFF4A";
-		document.getElementById("button4").style.background = "#FF3A3A";
+		document.getElementById("button" + answ[0]).style.background = "#FF3A3A";
+		document.getElementById("button" + answ[1]).style.background = "#FF3A3A";
+		document.getElementById("button" + answ[2]).style.background = "#6EFF4A";
+		document.getElementById("button" + answ[3]).style.background = "#FF3A3A";
 		setTimeout(change_question, 1300);
 	}
 }
 function qq2() {
 	if (document.getElementById("question").textContent == ques2) {
 		document.getElementById("button1").style.background = "#6EFF4A";
+		console.log(document.getElementById("button1").style.background);
 		document.getElementById("button2").style.background = "#FF3A3A";
 		document.getElementById("button3").style.background = "#FF3A3A";
 		document.getElementById("button4").style.background = "#FF3A3A";
@@ -221,11 +249,20 @@ function qq11() {
 		setTimeout(change_question, 1300);
 	}
 }
+
+// Buttons
+
 function check1() {
 	qq1(); qq2(); qq3(); qq4(); qq5(); qq6(); qq7(); qq8(); qq9(); qq10(); qq11();
+
+	if (document.getElementById("button1").style.background == "rgb(110, 255, 74)") {
+		score = score + 1;
+		console.log("Score: " + score)
+	}
 }
 
 function check2() {
+	// Are you ready to start // Yes
 	if (document.getElementById("question").textContent == "Are you ready to start?") {
 		if (document.getElementById("button2").textContent == "Yes") {
 			document.getElementById("button1").style.background = "#FF3A3A";
@@ -235,10 +272,17 @@ function check2() {
 			setTimeout(change_question, 1300);
 		}
 	}
+
 	qq1(); qq2(); qq3(); qq4(); qq5(); qq6(); qq7(); qq8(); qq9(); qq10(); qq11();
+
+	if (document.getElementById("button1").style.background == "rgb(110, 255, 74)") {
+		score = score + 1;
+		console.log("Score: " + score);
+	}
 }
 
 function check3() {
+	// Are you ready to start // Yes
 	if (document.getElementById("question").textContent == "Are you ready to start?") {
 		if (document.getElementById("button2").textContent == "Yes") {
 			document.getElementById("button1").style.background = "#FF3A3A";
@@ -248,9 +292,22 @@ function check3() {
 			setTimeout(change_question, 1300);
 		}
 	}
+	
 	qq1(); qq2(); qq3(); qq4(); qq5(); qq6(); qq7(); qq8(); qq9(); qq10(); qq11();
+
+	if (document.getElementById("button1").style.background == "rgb(110, 255, 74)") {
+		score = score + 1;
+		console.log("Score: " + score);
+
+	}
 }
 
 function check4() {
 	qq1(); qq2(); qq3(); qq4(); qq5(); qq6(); qq7(); qq8(); qq9(); qq10(); qq11();
+
+	if (document.getElementById("button1").style.background == "rgb(110, 255, 74)") {
+		score = score + 1;
+		console.log("Score: " + score);
+		
+	}
 }
